@@ -1,0 +1,21 @@
+---
+
+- hosts: all 
+  become: yes
+  become_user: root
+
+  tasks:
+    
+    - name: create test file in tmp
+      file:
+        path: /tmp/testing_testing
+        mode: '0777'
+        state: directory
+
+    - name: create testing_testing file
+      file: 
+        path: /tmp/testing_testing/testing_testing
+        mode: '0777'
+        state: touch
+
+

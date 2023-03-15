@@ -1,0 +1,10 @@
+---
+- name: Export Workflow
+  hosts: localhost
+  connection: local
+  gather_facts: false
+  vars:
+    controller_validate_certs: false
+  collections:
+    - awx.awx
+    - redhat_cop.tower_configuration
